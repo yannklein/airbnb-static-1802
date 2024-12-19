@@ -1,0 +1,17 @@
+<div class="container">
+  <h1 class="my-5 text-center">Yann's airbnb flats 🦊</h1>
+  <div class="row">
+    <%  @flats.each do |flat| %>
+    <div class="col-3">
+      <div class="card mb-3" style="width: 18rem;">
+        <img src="<%= flat["imageUrl"] %>" class="card-img-top" alt="<%= flat["name"] %>">
+        <div class="card-body">
+          <h4 class="card-title"><%= flat["name"] %></h4>
+          <p class="card-text"><%= flat["price"] %> <%= flat["priceCurrency"] %></p>
+          <a href="#" class="btn btn-primary">Check it out...</a>
+        </div>
+      </div>
+      </div>
+    <% end %>
+  </div>
+</div>
